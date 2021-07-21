@@ -1,0 +1,38 @@
+.BitcoinConverterComponent {
+  margin: auto;
+  position: relative;
+  top: 40px;
+  width: 80%;
+  padding: 30px;
+  border: 1px solid #c1c1c1;
+  background-color: #f2f5fa;
+  border-radius: 10px;
+  box-shadow: 6px 6px 8px -1px rgba(0, 0, 0, 0.2),
+  0px 1px 1px 0px rgba(0, 0, 0, 0.14),
+  0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+
+  .inputContainer {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .bitcoinAmount,
+  .currencySelector {
+    margin-left: 30px;
+    margin-right: 30px;
+  }
+
+  .currencySelector {
+    width: 182px;
+  }
+
+  .currencyCardContainer {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20px;
+    justify-content: space-evenly;
+  }
+}
