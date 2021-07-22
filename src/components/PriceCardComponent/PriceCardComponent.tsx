@@ -6,17 +6,18 @@ import {FormattedNumber, IntlProvider} from 'react-intl';
 
 const PriceCardComponent = ({currency, onClick, value}: {currency: string, onClick: () => void, value: number}) => {
   return (
-      <Card className={styles.PriceCardComponent}>
+      <Card className={styles.PriceCardComponent} data-testid="PriceCardComponent">
         <CardHeader avatar={
                       <div className={styles.cardAvatar}>
                         <img src={`https://static.coindesk.com/static/svgs/${currency.toLowerCase()}.svg`}
-                             className={styles.flag}>
+                             className={styles.flag}
+                             alt='flag'>
                         </img>
                         <div className={styles.cardTitle}>{currency}</div>
                       </div>
                     }
                     action={
-                      <IconButton aria-label="Remove currency" onClick={onClick}>
+                      <IconButton aria-label="Remove currency" data-testid="remove-currency-btn" onClick={onClick}>
                         <CancelIcon/>
                       </IconButton>
                     }

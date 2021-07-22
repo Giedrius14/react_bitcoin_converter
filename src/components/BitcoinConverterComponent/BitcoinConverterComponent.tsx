@@ -73,10 +73,12 @@ const BitcoinConverterComponent = () => {
             <FormControl className={styles.currencySelector}>
               <InputLabel id="currency-select-label">Add Currency</InputLabel>
               <Select onChange={handleSelect}
+                      inputProps={{ "data-testid": "currency-select-dropdown" }}
                       defaultValue={''}>
                       {
                         options.map((item, idx) =>
-                            <MenuItem key={idx} value={item.value}
+                            <MenuItem key={idx}
+                                      value={item.value}
                                       disabled={displayedCurrencies.includes(item.value)}>{item.text}</MenuItem>)
                       }
               </Select>

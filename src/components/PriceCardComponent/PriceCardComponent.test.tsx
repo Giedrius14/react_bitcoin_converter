@@ -5,7 +5,7 @@ import PriceCardComponent from './PriceCardComponent';
 
 describe('<PriceCardComponent />', () => {
   test('it should mount', () => {
-    render(<PriceCardComponent />);
+    render(<PriceCardComponent currency={'USD'} onClick={() => ({})} value={200}/>);
     
     const priceCardComponent = screen.getByTestId('PriceCardComponent');
 
